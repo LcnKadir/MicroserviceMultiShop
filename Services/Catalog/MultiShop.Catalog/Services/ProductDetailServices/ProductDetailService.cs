@@ -6,7 +6,7 @@ using MultiShop.Catalog.Settings;
 
 namespace MultiShop.Catalog.Services.ProductDetailServices
 {
-    public class ProductDetailService
+    public class ProductDetailService : IProductDetailService
     {
         private readonly IMapper _mapper;
         private readonly IMongoCollection<ProductDetail> _ProductDetailCollection;
