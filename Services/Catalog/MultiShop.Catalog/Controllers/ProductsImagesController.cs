@@ -9,45 +9,45 @@ namespace MultiShop.Catalog.Controllers
     [ApiController]
     public class ProductsImagesController : ControllerBase
     {
-        private readonly IProductImageService _ProductsImageService;
+        private readonly IProductImageService _productsImageService;
 
-        public ProductsImagesController(IProductImageService ProductsImageService)
+        public ProductsImagesController(IProductImageService productsImageService)
         {
-            _ProductsImageService = ProductsImageService;
+            _productsImageService = productsImageService;
         }
 
         [HttpGet]
         public async Task<IActionResult> ProductsImageList()
         {
-            var values = await _ProductsImageService.GetAllProductImageAsync();
+            var values = await _productsImageService.GetAllProductImageAsync();
             return Ok(values);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductsImageById(string id)
         {
-            var values = await _ProductsImageService.GetByIdProductImageAsync(id);
+            var values = await _productsImageService.GetByIdProductImageAsync(id);
             return Ok(values);
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateProductsImage(CreateProductImageDto createProductsImageDto)
         {
-            await _ProductsImageService.CreateProductImageAsync(createProductsImageDto);
+            await _productsImageService.CreateProductImageAsync(createProductsImageDto);
             return Ok("Ürün görselleri başarıyla eklendi");
         }
 
         [HttpDelete]
         public async Task<IActionResult> DeleteProductsImage(string id)
         {
-            await _ProductsImageService.DeleteProductImageAsync(id);
+            await _productsImageService.DeleteProductImageAsync(id);
             return Ok("Ürün görselleri başarıyla silindi");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateProductsImage(UpdateProductImageDto updateProductsImageDto)
         {
-            await _ProductsImageService.UpdateProductImageAsync(updateProductsImageDto);
+            await _productsImageService.UpdateProductImageAsync(updateProductsImageDto);
             return Ok("Ürün görselleri başarıyla güncellendi");
         }
     }
