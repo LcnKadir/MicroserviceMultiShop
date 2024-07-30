@@ -25,7 +25,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Context\" />
     <Folder Include="Dtos\" />
-    <Folder Include="Entites\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
