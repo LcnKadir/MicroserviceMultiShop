@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\CQRS\" />
+    <Folder Include="Features\CQRS\Commands\AddressCommands\" />
+    <Folder Include="Features\CQRS\Handlers\AddressHandlers\" />
+    <Folder Include="Features\CQRS\Queries\AddressQueries\" />
     <Folder Include="Features\Mediator\" />
   </ItemGroup>
 
