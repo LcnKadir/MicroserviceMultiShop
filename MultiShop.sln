@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Domain", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Application", "Services\Order\Core\MultiShop.Order.Application\MultiShop.Order.Application.csproj", "{3CAC23A5-768E-4279-B88E-258BA0747959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Persistence", "Services\Order\Infrastructure\MultiShop.Order.Persistence\MultiShop.Order.Persistence.csproj", "{BA191DB6-2466-4D81-B883-8A12C3F55E16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{3CAC23A5-768E-4279-B88E-258BA0747959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CAC23A5-768E-4279-B88E-258BA0747959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CAC23A5-768E-4279-B88E-258BA0747959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA191DB6-2466-4D81-B883-8A12C3F55E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA191DB6-2466-4D81-B883-8A12C3F55E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA191DB6-2466-4D81-B883-8A12C3F55E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA191DB6-2466-4D81-B883-8A12C3F55E16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{22E22EC0-8823-4898-A559-56B6F13382B4} = {A093362A-4AD1-4A37-BFBF-0370EAA3B5B5}
 		{22F924EA-266B-4FE4-853A-89C04D856A76} = {3B5B6328-39E9-48CA-B04D-17FAD177C869}
 		{3CAC23A5-768E-4279-B88E-258BA0747959} = {3B5B6328-39E9-48CA-B04D-17FAD177C869}
+		{BA191DB6-2466-4D81-B883-8A12C3F55E16} = {21E08313-25DC-4166-8967-5065679195C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70E21A9D-C997-4C6F-AAF9-A106600EB992}
