@@ -32,7 +32,7 @@ namespace MultiShop.Order.WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpDelete("{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetOrderDetailById(int id)
         {
             var values = await _getOrderDetailByIdQueryHandler.Handle(new GetOrderDetailByIdQuery(id));
@@ -46,7 +46,7 @@ namespace MultiShop.Order.WebApi.Controllers
             return Ok("Sipariş detayı başarıyla eklendi");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveOrderDetail(int id)
         {
             await _removeOrderDetailQueryHandler.Handle(new RemoveOrderDetailCommand(id));

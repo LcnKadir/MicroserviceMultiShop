@@ -22,7 +22,6 @@ namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers
         {
             await _repository.CreateAsync(new OrderDetail
             {
-                OrderDetailId = command.OrderingId,
                 ProductAmount = command.ProductAmount,
                 ProductId = command.ProductId,
                 ProductName = command.ProductName,
