@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Order.Application.Features.CQRS.Queries.AddressQueries;
@@ -7,6 +8,7 @@ using MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries;
 
 namespace MultiShop.Order.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderingController : ControllerBase
@@ -48,7 +50,7 @@ namespace MultiShop.Order.WebApi.Controllers
         }
 
         [HttpPut]
-        public  async Task<IActionResult> UpdateORdering(UpdateOrderingCommand command)
+        public async Task<IActionResult> UpdateORdering(UpdateOrderingCommand command)
         {
             await _mediator.Send(command);
             return Ok("Sipariş başarıyla güncellendi");
